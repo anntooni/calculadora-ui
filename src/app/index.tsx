@@ -38,6 +38,7 @@ const estilos = StyleSheet.create({
     backgroundColor: "black",
     paddingTop: 45,
     paddingHorizontal: 15,
+    paddingBottom: 40,
   },
   arriba: {
     flexDirection: "row",
