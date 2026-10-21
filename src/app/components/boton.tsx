@@ -1,23 +1,34 @@
-
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text } from "react-native";
 
 type BotonProps = {
   texto: string;
   colorTexto?: string;
   colorFondo?: string;
+  onPress?: () => void;
 };
 
 export default function Boton({
   texto,
   colorTexto = "#50D52D",
   colorFondo = "#071704",
+  onPress,
 }: BotonProps) {
   return (
-    <View style={[estilos.boton, { backgroundColor: colorFondo }]}>
+    <Pressable
+      onPress={onPress}
+      style={({ pressed }) => [
+        estilos.boton,
+        {
+          backgroundColor: pressed ? "#24551B" : colorFondo,
+          transform: [{ scale: pressed ? 0.92 : 1 }],
+          opacity: pressed ? 0.8 : 1,
+        },
+      ]}
+    >
       <Text style={[estilos.texto, { color: colorTexto }]}>
         {texto}
       </Text>
-    </View>
+    </Pressable>
   );
 }
 
