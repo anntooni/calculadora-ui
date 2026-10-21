@@ -8,6 +8,18 @@ export default function Index() {
     <View style={estilos.fondo}>
       <View style={estilos.arriba}>
         <Text style={estilos.icono}>◷</Text>
+        <Text style={estilos.icono}></Text>
+        <Text style={estilos.icono}></Text>
+        <Text style={estilos.icono}></Text>
+        <Text style={estilos.icono}></Text>
+        <Text style={estilos.icono}></Text>
+        <Text style={estilos.icono}></Text>
+        <Text style={estilos.icono}></Text>
+        <Text style={estilos.icono}></Text>
+        <Text style={estilos.icono}></Text>
+        <Text style={estilos.icono}></Text>
+        <Text style={estilos.icono}></Text>
+        <Text style={estilos.icono}></Text>
         <Text style={estilos.icono}>▱</Text>
         <Text style={estilos.icono}>☑</Text>
       </View>
