@@ -34,8 +34,7 @@ export default function Rejilla() {
       </View>
 
       <View style={estilos.fila}>
-        <Boton texto="()" />
-        <Boton texto="0" />
+        <Boton texto="0" doble />
         <Boton texto="." />
         <Boton
           texto="="

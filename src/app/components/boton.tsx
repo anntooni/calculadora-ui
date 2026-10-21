@@ -1,3 +1,4 @@
+
 import { Pressable, StyleSheet, Text } from "react-native";
 
 type BotonProps = {
@@ -5,6 +6,7 @@ type BotonProps = {
   colorTexto?: string;
   colorFondo?: string;
   onPress?: () => void;
+  doble?: boolean;
 };
 
 export default function Boton({
@@ -12,12 +14,14 @@ export default function Boton({
   colorTexto = "#50D52D",
   colorFondo = "#071704",
   onPress,
+  doble = false,
 }: BotonProps) {
   return (
     <Pressable
       onPress={onPress}
       style={({ pressed }) => [
         estilos.boton,
+        doble && estilos.botonDoble,
         {
           backgroundColor: pressed ? "#24551B" : colorFondo,
           transform: [{ scale: pressed ? 0.92 : 1 }],
@@ -39,6 +43,9 @@ const estilos = StyleSheet.create({
     borderRadius: 50,
     justifyContent: "center",
     alignItems: "center",
+  },
+  botonDoble: {
+    flex: 2.12,
   },
   texto: {
     fontSize: 28,
