@@ -28,9 +28,6 @@ export default function Index() {
 
       <Rejilla />
 
-      <View style={estilos.barra}>
-        <View style={estilos.linea} />
-      </View>
     </View>
   );
 }
