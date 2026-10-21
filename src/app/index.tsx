@@ -1,18 +1,54 @@
-import { Text, View, StyleSheet } from "react-native";
+
+import { StyleSheet, Text, View } from "react-native";
+import Rejilla from "./components/rejilla";
+import Display from "./display";
 
 export default function Index() {
   return (
-    <View style={styles.container}>
-      <Text>hola mundo</Text>
+    <View style={estilos.fondo}>
+      <View style={estilos.arriba}>
+        <Text style={estilos.icono}>◷</Text>
+        <Text style={estilos.icono}>▱</Text>
+        <Text style={estilos.icono}>☑</Text>
+      </View>
+
+      <Display />
+
+      <Rejilla />
+
+      <View style={estilos.barra}>
+        <View style={estilos.linea} />
+      </View>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
+const estilos = StyleSheet.create({
+  fondo: {
     flex: 1,
-    alignItems: "center",
+    backgroundColor: "black",
+    paddingTop: 45,
+    paddingHorizontal: 15,
+  },
+  arriba: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingHorizontal: 15,
+    height: 40,
+  },
+  icono: {
+    color: "#50D52D",
+    fontSize: 23,
+  },
+  barra: {
+    height: 25,
     justifyContent: "center",
-    backgroundColor: "lightblue",
+    alignItems: "center",
+  },
+  linea: {
+    width: 110,
+    height: 4,
+    borderRadius: 10,
+    backgroundColor: "#777777",
   },
 });
