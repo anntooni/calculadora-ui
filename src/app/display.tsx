@@ -1,20 +1,21 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export default function Display() {
+type DisplayProps = {
+  operacion: string;
+  resultado: string;
+};
+
+export default function Display({ operacion, resultado }: DisplayProps) {
   return (
     <View style={estilos.contenedor}>
       <View style={estilos.operacion}>
-        <Text style={estilos.textoOperacion}>
-          125 + 75
-        </Text>
+        <Text style={estilos.textoOperacion}>{operacion}</Text>
       </View>
 
       <View style={estilos.linea} />
 
       <View style={estilos.resultado}>
-        <Text style={estilos.textoResultado}>
-          200
-        </Text>
+        <Text style={estilos.textoResultado}>{resultado}</Text>
       </View>
     </View>
   );
