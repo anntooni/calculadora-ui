@@ -1,4 +1,3 @@
-
 import { StyleSheet, View } from "react-native";
 import Boton from "./boton";
 
@@ -15,28 +14,24 @@ export default function Rejilla({ onPress }: RejillaProps) {
         <Boton texto="%" onPress={() => onPress("%")} />
         <Boton texto="÷" colorTexto="#70C5CC" onPress={() => onPress("÷")} />
       </View>
-
       <View style={estilos.fila}>
         <Boton texto="7" onPress={() => onPress("7")} />
         <Boton texto="8" onPress={() => onPress("8")} />
         <Boton texto="9" onPress={() => onPress("9")} />
         <Boton texto="×" colorTexto="#70C5CC" onPress={() => onPress("×")} />
       </View>
-
       <View style={estilos.fila}>
         <Boton texto="4" onPress={() => onPress("4")} />
         <Boton texto="5" onPress={() => onPress("5")} />
         <Boton texto="6" onPress={() => onPress("6")} />
         <Boton texto="−" colorTexto="#70C5CC" onPress={() => onPress("−")} />
       </View>
-
       <View style={estilos.fila}>
         <Boton texto="1" onPress={() => onPress("1")} />
         <Boton texto="2" onPress={() => onPress("2")} />
         <Boton texto="3" onPress={() => onPress("3")} />
         <Boton texto="+" colorTexto="#70C5CC" onPress={() => onPress("+")} />
       </View>
-
       <View style={estilos.fila}>
         <Boton texto="0" doble onPress={() => onPress("0")} />
         <Boton texto="." onPress={() => onPress(".")} />

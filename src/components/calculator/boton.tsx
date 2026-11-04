@@ -1,4 +1,3 @@
-
 import { Pressable, StyleSheet, Text } from "react-native";
 
 type BotonProps = {
@@ -7,6 +6,7 @@ type BotonProps = {
   colorFondo?: string;
   onPress?: () => void;
   doble?: boolean;
+  compacto?: boolean;
 };
 
 export default function Boton({
@@ -15,6 +15,7 @@ export default function Boton({
   colorFondo = "#071704",
   onPress,
   doble = false,
+  compacto = false,
 }: BotonProps) {
   return (
     <Pressable
@@ -22,6 +23,7 @@ export default function Boton({
       style={({ pressed }) => [
         estilos.boton,
         doble && estilos.botonDoble,
+        compacto && estilos.botonCompacto,
         {
           backgroundColor: pressed ? "#24551B" : colorFondo,
           transform: [{ scale: pressed ? 0.92 : 1 }],
@@ -29,7 +31,13 @@ export default function Boton({
         },
       ]}
     >
-      <Text style={[estilos.texto, { color: colorTexto }]}>
+      <Text
+        style={[
+          estilos.texto,
+          compacto && estilos.textoCompacto,
+          { color: colorTexto },
+        ]}
+      >
         {texto}
       </Text>
     </Pressable>
@@ -47,7 +55,14 @@ const estilos = StyleSheet.create({
   botonDoble: {
     flex: 2.12,
   },
+  botonCompacto: {
+    height: 46,
+    borderRadius: 16,
+  },
   texto: {
     fontSize: 28,
+  },
+  textoCompacto: {
+    fontSize: 16,
   },
 });

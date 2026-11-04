@@ -11,9 +11,7 @@ export default function Display({ operacion, resultado }: DisplayProps) {
       <View style={estilos.operacion}>
         <Text style={estilos.textoOperacion}>{operacion}</Text>
       </View>
-
       <View style={estilos.linea} />
-
       <View style={estilos.resultado}>
         <Text style={estilos.textoResultado}>{resultado}</Text>
       </View>
